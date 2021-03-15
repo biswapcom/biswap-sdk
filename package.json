@@ -1,14 +1,17 @@
 {
   "name": "biswap-sdk",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🛠 An SDK for building applications on top of biswap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/biswapcom/biswap-sdk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biswapcom/biswap-sdk"
+  },
   "keywords": [
     "biswap",
     "ethereum"
@@ -56,5 +59,8 @@
     "printWidth": 120,
     "semi": false,
     "singleQuote": true
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
