@@ -1,16 +1,16 @@
 {
-  "name": "@pancakeswap-libs/sdk",
+  "name": "biswap-sdk",
   "license": "MIT",
   "version": "1.0.1",
-  "description": "🛠 An SDK for building applications on top of pancakeswap.",
+  "description": "🛠 An SDK for building applications on top of biswap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/pancakeswap/pancakeswap-sdk.git",
+  "repository": "https://github.com/biswapcom/biswap-sdk",
   "keywords": [
-    "pancakeswap",
+    "biswap",
     "ethereum"
   ],
   "module": "dist/sdk.esm.js",
