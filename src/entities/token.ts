@@ -56,6 +56,23 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
   }
 }
 
+export const BSW = {
+  [ChainId.MAINNET]: new Token(
+      ChainId.MAINNET,
+      '0x965F527D9159dCe6288a2219DB51fc6Eef120dD1',
+      18,
+      'BSW',
+      'Biswap'
+  ),
+  [ChainId.BSCTESTNET]: new Token(
+      ChainId.BSCTESTNET,
+      '0x965F527D9159dCe6288a2219DB51fc6Eef120dD1',
+      18,
+      'BSW',
+      'Biswap'
+  )
+}
+
 export const WETH = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
