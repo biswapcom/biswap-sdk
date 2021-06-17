@@ -5,7 +5,9 @@ export type BigintIsh = JSBI | bigint | string
 
 export enum ChainId {
   MAINNET = 56,
-  BSCTESTNET = 97
+  BSCTESTNET = 97,
+  MATIC = 137,
+  MATIC_TESTNET = 80001
 }
 
 export enum TradeType {
@@ -19,9 +21,26 @@ export enum Rounding {
   ROUND_UP
 }
 
-export const FACTORY_ADDRESS = '0x858E3312ed3A876947EA49d572A7C42DE08af7EE'
 
-export const INIT_CODE_HASH = '0xfea293c909d87cd4153593f077b76bb7e94340200f4ee84211ae8e4f9bd7ffdf'
+export const Contracts: { [chainId in ChainId]: any} = {
+  [ChainId.MATIC]: {
+    factory: '0x858E3312ed3A876947EA49d572A7C42DE08af7EE',
+    init_code: '0xfea293c909d87cd4153593f077b76bb7e94340200f4ee84211ae8e4f9bd7ffdf'
+  },
+  [ChainId.MATIC_TESTNET]: {
+    factory: '0x858E3312ed3A876947EA49d572A7C42DE08af7EE',
+    init_code: '0xfea293c909d87cd4153593f077b76bb7e94340200f4ee84211ae8e4f9bd7ffdf'
+  },
+  [ChainId.BSCTESTNET]: {
+    factory: '0x858E3312ed3A876947EA49d572A7C42DE08af7EE',
+    init_code: '0xfea293c909d87cd4153593f077b76bb7e94340200f4ee84211ae8e4f9bd7ffdf'
+  },
+  [ChainId.MAINNET]: {
+    factory: '0x858E3312ed3A876947EA49d572A7C42DE08af7EE',
+    init_code: '0xfea293c909d87cd4153593f077b76bb7e94340200f4ee84211ae8e4f9bd7ffdf'
+  },
+}
+
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
@@ -33,7 +52,7 @@ export const THREE = JSBI.BigInt(3)
 export const FIVE = JSBI.BigInt(5)
 export const TEN = JSBI.BigInt(10)
 export const _100 = JSBI.BigInt(100)
-export const _998 = JSBI.BigInt(999)
+export const _998 = JSBI.BigInt(997)
 export const _1000 = JSBI.BigInt(1000)
 
 export enum SolidityType {

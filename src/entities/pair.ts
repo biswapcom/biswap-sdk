@@ -7,8 +7,7 @@ import { getCreate2Address } from '@ethersproject/address'
 
 import {
   BigintIsh,
-  FACTORY_ADDRESS,
-  INIT_CODE_HASH,
+  Contracts,
   MINIMUM_LIQUIDITY,
   ZERO,
   ONE,
@@ -36,9 +35,9 @@ export class Pair {
         [tokens[0].address]: {
           ...PAIR_ADDRESS_CACHE?.[tokens[0].address],
           [tokens[1].address]: getCreate2Address(
-            FACTORY_ADDRESS,
+              Contracts[tokenA.chainId].factory,
             keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]),
-            INIT_CODE_HASH
+              Contracts[tokenA.chainId].init_code
           )
         }
       }

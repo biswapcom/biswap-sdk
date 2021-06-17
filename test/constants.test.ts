@@ -1,4 +1,4 @@
-import { INIT_CODE_HASH } from '../src/constants'
+import { Contracts } from '../src/constants'
 
 //import { bytecode } from '@uniswap/v2-core/build/UniswapV2Pair.json'
 //import { keccak256 } from '@ethersproject/solidity'
@@ -14,7 +14,7 @@ describe('constants', () => {
     // })
     //TODO: Replace with real PancakePair.json
     it('matches computed bytecode hash', () => {
-      expect(INIT_CODE_HASH).toEqual('0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66')
+      expect(Contracts[56].init_code).toEqual('0xfea293c909d87cd4153593f077b76bb7e94340200f4ee84211ae8e4f9bd7ffdf')
     })
   })
 })
